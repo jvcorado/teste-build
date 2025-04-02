@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 
 const LoaderContext = createContext<{ loading: boolean; isFirstLoad: boolean }>(
   {
@@ -9,6 +10,10 @@ const LoaderContext = createContext<{ loading: boolean; isFirstLoad: boolean }>(
     isFirstLoad: false,
   }
 );
+
+const RouteLoader = dynamic(() => import("@/components/routerLoader"), {
+  ssr: false,
+});
 
 export function LoaderProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -30,7 +35,7 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <LoaderContext.Provider value={{ loading, isFirstLoad }}>
-      {children}
+      <RouteLoader>{children}</RouteLoader>
     </LoaderContext.Provider>
   );
 }
