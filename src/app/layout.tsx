@@ -8,7 +8,6 @@ import { Toaster } from "sonner";
 
 import AOSInitializer from "@/components/AOSInitializer";
 import { LoaderProvider } from "@/context/LoaderProvider";
-import RouteLoader from "@/components/routerLoader";
 
 const poppins = Poppins({
   weight: ["300", "400", "600", "700", "900"],
@@ -35,9 +34,7 @@ export default function RootLayout({
           <div className="sticky top-0  z-[999]">
             <Header />
           </div>
-          <AOSInitializer>
-            <RouteLoader>{children}</RouteLoader>
-          </AOSInitializer>
+          <AOSInitializer>{children}</AOSInitializer>
 
           <Toaster />
           <Footer />
