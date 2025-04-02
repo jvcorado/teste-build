@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --primary-brand: 0, 0%, 82%;
+    --primary-yellow: 39, 89%, 60%;
+    --primary-blue: 39, 89%, 60%;
+    --primary-light-blue: 39, 89%, 60%;
+    --primary-light-green: 39, 89%, 60%;
+    --radius: 0.625rem;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --border: 0, 0%, 82%, 1;
+  }
+}
+
+@layer base {
+  :root {
+    /* Primeira linha - Verde Pastel */
+    --primary-light-green-50-x: hsl(127, 53%, 97%);
+    --primary-light-green-100-x: hsl(125, 63%, 93%);
+    --primary-light-green-200-x: hsl(127, 58%, 85%);
+    --primary-light-green-300-x: hsl(127, 55%, 73%);
+    --primary-light-green-400-x: hsl(127, 50%, 58%);
+    --primary-light-green-500-x: hsl(127, 51%, 47%);
+
+    /* Segunda linha - Verde Vibrante */
+    --primary-brand-50-x: hsl(148, 100%, 96%);
+    --primary-brand-100-x: hsl(155, 100%, 91%);
+    --primary-brand-200-x: hsl(154, 100%, 83%);
+    --primary-brand-300-x: hsl(155, 100%, 70%);
+    --primary-brand-400-x: hsl(154, 100%, 55%);
+    --primary-brand-401-x: hsl(154, 27%, 60%);
+    --primary-brand-500-x: hsl(150, 100%, 49%);
+    --primary-brand-600-x: hsl(149, 100%, 41%);
+    --primary-brand-700-x: hsl(150, 100%, 32%);
+    --primary-brand-800-x: hsl(152, 100%, 25%);
+    --primary-brand-900-x: hsl(154, 100%, 21%);
+
+    /* Terceira linha - Amarelo/Alaranjado */
+    --primary-yellow-50-x: hsl(45, 100%, 96%);
+    --primary-yellow-100-x: hsl(45, 96%, 89%);
+    --primary-yellow-200-x: hsl(45, 98%, 77%);
+    --primary-yellow-300-x: hsl(43, 98%, 65%);
+    --primary-yellow-400-x: hsl(40, 98%, 60%);
+
+    /* Quarta linha - Azul Neon */
+    --primary-light-blue-50-x: hsl(175, 100%, 95%);
+    --primary-light-blue-100-x: hsl(174, 100%, 89%);
+    --primary-light-blue-200-x: hsl(174, 100%, 79%);
+    --primary-light-blue-300-x: hsl(174, 100%, 64%);
+    --primary-light-blue-400-x: hsl(177, 100%, 50%);
+    --primary-light-blue-500-x: hsl(184, 100%, 50%);
+    --primary-light-blue-600-x: hsl(187, 100%, 42%);
+    --primary-light-blue-700-x: hsl(188, 100%, 34%);
+    --primary-light-blue-800-x: hsl(188, 99%, 29%);
+
+    /* Quinta linha - Aqua / Ciano claro */
+    --primary-blue-50-x: hsl(173, 100%, 95%);
+    --primary-blue-100-x: hsl(172, 100%, 88%);
+    --primary-blue-200-x: hsl(172, 100%, 77%);
+    --primary-blue-300-x: hsl(172, 100%, 62%);
+    --primary-blue-400-x: hsl(172, 100%, 50%);
+    --primary-blue-500-x: hsl(180, 100%, 50%);
+    --primary-blue-600-x: hsl(186, 100%, 45%);
+    --primary-blue-700-x: hsl(187, 100%, 35%);
+    --primary-blue-800-x: hsl(187, 100%, 28%);
+    --primary-blue-900-x: hsl(189, 100%, 22%);
+    --primary-blue-950-x: hsl(191, 100%, 17%);
+
+    /* Última linha - Cinza/Preto */
+    --primary-black-50-x: hsl(0, 0%, 96%);
+    --primary-black-100-x: hsl(0, 0%, 91%);
+    --primary-black-200-x: hsl(0, 0%, 82%);
+    --primary-black-300-x: hsl(0, 0%, 69%);
+    --primary-black-400-x: hsl(0, 0%, 53%);
+    --primary-black-500-x: hsl(0, 0%, 43%);
+    --primary-black-600-x: hsl(0, 0%, 36%);
+    --primary-black-700-x: hsl(0, 0%, 31%);
+    --primary-black-800-x: hsl(0, 0%, 27%);
+    --primary-black-900-x: hsl(0, 0%, 24%);
+    --primary-black-950-x: hsl(0, 0%, 12%);
+  }
+}
+
+.hero_img_bg {
+  background-image: url("../../public/hero.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_sustainability_img_bg {
+  background-image: url("../../public/HERO_SUSTAINABILITY.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_company_img_bg {
+  background-image: url("../../public/BANNER_FACTORY.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product_line_img_bg {
+  background-image: url("../../public/product/product_line.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product_uni_img_bg {
+  background-image: url("../../public/product/product_uni.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pruduct_duo_img_bg {
+  background-image: url("../../public/product/pruduct_duo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pruduct_carton_img_bg {
+  background-image: url("../../public/product/product_carton.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_social_responsibility_img_bg {
+  background-image: url("../../public/IMAGE_SOCIAL.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Estilo para navegadores Webkit (Chrome, Safari) */
+.scroll-transparent::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-transparent::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.scroll-transparent::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
+
+.scroll-transparent::-webkit-scrollbar-track {
+  display: none;
+}
+
+.cta {
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.glass {
+  background: rgba(3, 82, 20, 0.418); /* ou ajuste conforme o fundo */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Adicione isso ao seu arquivo CSS */
+.active-slide .group {
+  /* Estilos que simulam o hover */
+}
+
+.active-slide .group-hover\:bg-opacity-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.active-slide .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.active-slide .group-hover\:opacity-70 {
+  opacity: 0.7;
+}
