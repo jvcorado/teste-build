@@ -15,6 +15,10 @@ const RouteLoader = dynamic(() => import("@/components/routerLoader"), {
   ssr: false,
 });
 
+const PageTransition = dynamic(() => import("@/components/pageTransition"), {
+  ssr: false,
+});
+
 export function LoaderProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(false);
@@ -27,7 +31,7 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
       const timeout = setTimeout(() => {
         setLoading(false);
         setIsFirstLoad(false); // após a primeira animação, já não é mais primeira carga
-      }, 2300);
+      }, 2600);
 
       return () => clearTimeout(timeout);
     }
@@ -35,7 +39,14 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <LoaderContext.Provider value={{ loading, isFirstLoad }}>
-      <RouteLoader>{children}</RouteLoader>
+      {!loading ? (
+        <PageTransition routeKey={pathname}>{children}</PageTransition>
+      ) : (
+        <>
+          <RouteLoader />
+          {children}
+        </>
+      )}
     </LoaderContext.Provider>
   );
 }

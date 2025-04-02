@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${poppins.variable} antialiased !overflow-x-hidden scroll-transparent`}
+        className={`${poppins.variable} font-sans antialiased !overflow-x-hidden scroll-transparent`}
       >
         <LoaderProvider>
           <div className="sticky top-0  z-[999]">
