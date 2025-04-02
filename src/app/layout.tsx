@@ -9,6 +9,8 @@ import { Toaster } from "sonner";
 import AOSInitializer from "@/components/AOSInitializer";
 import { LoaderProvider } from "@/context/LoaderProvider";
 
+import dynamic from "next/dynamic";
+
 const poppins = Poppins({
   weight: ["300", "400", "600", "700", "900"],
   subsets: ["latin"],
@@ -19,6 +21,10 @@ export const metadata: Metadata = {
   title: "Guapi Papéis",
   description: "Landing page da Guapi Papéis",
 };
+
+const RouteLoader = dynamic(() => import("@/components/routerLoader"), {
+  ssr: false,
+});
 
 export default function RootLayout({
   children,
@@ -34,7 +40,9 @@ export default function RootLayout({
           <div className="sticky top-0  z-[999]">
             <Header />
           </div>
-          <AOSInitializer>{children}</AOSInitializer>
+          <AOSInitializer>
+            <RouteLoader>{children}</RouteLoader>
+          </AOSInitializer>
 
           <Toaster />
           <Footer />
